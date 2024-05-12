@@ -11,13 +11,25 @@ const fetchImages = async (query) => {
    const response = await fetch(url);
    const data = await response.json();
 
-//    console.log(data);
+//console.log(data);
 
+// Creating Image Div
 data.results.forEach(photo => {
     const imageElement = document.createElement('div');
+    imageElement.classList.add('imageDiv');
     imageElement.innerHTML = `<img src="${photo.urls.regular}"/>`;
 
+//Creating Overlay
+    const overlayElement = document.createElement('div');
+    overlayElement.classList.add('overlay');
+
+// Creating Overlayb Text
+    const overlayText = document.createElement('h3');
+    overlayText.innerText = `${photo.alt_description}`
+
+    imageElement.appendChild(overlayElement);
     imagesContainer.appendChild(imageElement);
+    overlayElement.appendChild(overlayText)
 });
 }
 
