@@ -53,6 +53,7 @@ header form .search-container i{
 .images-container img {
     width: 280px;
     height: 280px;
+    border-radius: 6px;
 }
 
 .images-container .imageDiv {
@@ -66,7 +67,7 @@ header form .search-container i{
     width: 100%;
     height: 0;
     background-color: rgb(0, 0, 0, 0.7);
-    transition: height 0.3s ease;
+    transition: height 0.5s ease;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,8 +86,28 @@ header form .search-container i{
 
 .imageDiv:hover .overlay h3 {
     display: block;
-
 }
+
+.lodeMoreBtn {
+    border: none;
+    font-size: 20px;
+    background-color: rgb(11, 101, 101);
+    padding: 8px 12px;
+    font-weight: 600;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    display: none;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 50px 0;
+}
+
 @media screen and (max-width:920px) {
     header {
         width: 80%;
