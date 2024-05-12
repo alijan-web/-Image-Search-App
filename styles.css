@@ -43,6 +43,16 @@ header form .search-container i{
 
 .images-container {
     margin-block: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.images-container img {
+    width: 280px;
+    height: 280px;
 }
 
 @media screen and (max-width:920px) {
